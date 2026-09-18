@@ -1,0 +1,9 @@
+step,detail,rows_affected
+load,raw rows loaded,5415
+dedup,duplicate household+round submissions removed,15
+range_constraint,"landholding_acres outside [0, 20] set to missing",71
+range_constraint,"price_received_kes_per_kg outside [0, 500] set to missing",84
+missing_data,crop_income_kes missing (excluded from income indicator denominator),0
+missing_data,yield_kg_per_acre missing (excluded from yield indicator denominator),0
+write,clean record-level dataset written,5400
+write,indicator summary table written,5
