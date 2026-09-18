@@ -13,13 +13,15 @@ Reports on the indicators defined in Piece 1 (01-measurement-system.md):
 
 Run with: streamlit run app.py
 """
+import os
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
 st.set_page_config(page_title="KDRSIP M&E Dashboard", layout="wide", page_icon="🌾")
 
-DATA_DIR = "./data/clean"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data", "clean")
 
 # Targets from Piece 1's results framework — the dashboard always shows
 # performance against these, never against an arbitrary trend line.
